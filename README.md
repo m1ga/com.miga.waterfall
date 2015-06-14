@@ -21,7 +21,7 @@ var sx = Math.floor(Math.random() * 2) + 1;
 var sy = Math.floor(Math.random() * 2) + 1;
 
 // find maximum free width
-var freeX = $.waterfall.freeX();
+var freeX = $.waterfall.getFreeWidth();
 if (sx>freeX) {
     sx=freeX;
 }

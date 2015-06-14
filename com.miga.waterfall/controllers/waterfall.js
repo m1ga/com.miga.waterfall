@@ -20,10 +20,7 @@ function addRow() {
 
 addRow();
 
-exports.freeX = function() {
-    console.log("-----------------------------");
-    console.log("current Pos: " + currentX + ":" + currentY);
-
+exports.getFreeWidth = function() {
     var sizeX = 0;
     var currentElement = grid[currentY][currentX];
     var cY = currentY;
@@ -36,13 +33,11 @@ exports.freeX = function() {
                     sizeX++;
                 }
 
-                console.log("X= " + i + " currentElement= " + currentElement);
                 if (currentElement === 0 && grid[cY][i] == 1) {
                     break;
                 } else {
                     currentElement = grid[cY][i];
                 }
-                console.log(currentX + ": " + currentElement);
             }
         } else {
             sizeX = itemAmount;
@@ -111,7 +106,6 @@ function getNextX(s, t, p) {
 }
 
 exports.addItem = function(opt) {
-    console.log("add item");
     var x = opt.size.x;
     var y = opt.size.y;
     var obj = opt.object;
@@ -191,9 +185,6 @@ exports.addItem = function(opt) {
 
     $.view_waterfall.add(v);
 
-    //console.log(grid);
-    console.log("Adding  " + obj.image + " (" + x + ":" + y + ") at" + currentX + ":" + currentY);
-
     currentX += x;
     if (currentX > itemAmount - 1) {
         currentX = 0;
@@ -202,7 +193,6 @@ exports.addItem = function(opt) {
 };
 
 exports.clear = function() {
-    console.log("clear");
     grid = [];
     $.view_waterfall.removeAllChildren();
     addRow();
