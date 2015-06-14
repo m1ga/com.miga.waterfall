@@ -62,7 +62,7 @@ function getNextX(s, t, p) {
             place.top = currentY * itemWidth;
             place.width = itemWidth;
             place.height = itemWidth;
-            $.view_waterfall.add(place);
+            $.waterfall.add(place);
 
         }
 
@@ -91,7 +91,7 @@ function getNextX(s, t, p) {
                 place.top = currentY * itemWidth;
                 place.width = itemWidth;
                 place.height = itemWidth;
-                $.view_waterfall.add(place);
+                $.waterfall.add(place);
 
                 currentX += 2;
                 getNextX(s, t, p);
@@ -183,7 +183,7 @@ exports.addItem = function(opt) {
         }
     }
 
-    $.view_waterfall.add(v);
+    $.waterfall.add(v);
 
     currentX += x;
     if (currentX > itemAmount - 1) {
@@ -194,7 +194,7 @@ exports.addItem = function(opt) {
 
 exports.clear = function() {
     grid = [];
-    $.view_waterfall.removeAllChildren();
+    $.waterfall.removeAllChildren();
     addRow();
     currentX = 0;
     currentY = 0;

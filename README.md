@@ -7,7 +7,7 @@
 
 ###xml
 ~~~
-<Widget src="waterfall" name="waterfall" id="waterfall"/>
+<Widget src="com.miga.waterfall" id="waterfall"/>
 ~~~
 
 ###controller
