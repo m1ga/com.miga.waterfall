@@ -1,6 +1,8 @@
 = Alloy Waterfall layout =
 
 
+![alt text](preview.gif "Preview")
+
 == Usage ==
 
 xml:
