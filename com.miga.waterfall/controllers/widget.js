@@ -1,5 +1,5 @@
 var args = arguments[0] || {};
-var width = Ti.Platform.displayCaps.platformWidth / Ti.Platform.displayCaps.logicalDensityFactor;
+var width = (OS_ANDROID)?Ti.Platform.displayCaps.platformWidth / Ti.Platform.displayCaps.logicalDensityFactor:Ti.Platform.displayCaps.platformWidth;
 var lastRow = 0;
 var itemAmount = (args.itemCount !== undefined) ? args.itemCount : (Alloy.isTablet ? 6 : 4);
 var itemWidth = Math.floor(width / itemAmount);
