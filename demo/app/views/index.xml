@@ -1,0 +1,5 @@
+<Alloy>
+	<Window class="container">
+		<Widget id="waterfall" src="com.miga.waterfall"/>
+	</Window>
+</Alloy>
